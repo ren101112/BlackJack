@@ -4,6 +4,8 @@ public class dealer {
     public boolean isOver15;
     public boolean isBust;
 
+
+
     public dealer(){
 
 
