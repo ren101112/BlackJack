@@ -4,9 +4,15 @@ public class player {
     public boolean isBust;
     public boolean isHit;
     public String name;
+    public card[] hand;
+
 
 
     public player(){
+        cardTotal=0;
+        isBust=false;
+        isHit=false;
+        name="ren";
 
         hit();
         stand();

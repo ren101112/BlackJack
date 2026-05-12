@@ -4,12 +4,26 @@ public String suit;
 public String name;
 public int value;
 
-public card(String Psuit, int Pname, int Pvalue){
-    suit=Psuit;
-    //name=Pname;
+public card(int Psuit, int Pname, int Pvalue){
     value=Pvalue;
+
+    if (Psuit==0){
+        suit="hearts";
+
+
+    }else if (Psuit==1){
+
+        suit="diamonds";
+    }else if (Psuit==2){
+
+        suit="clubs";
+    }else if (Psuit==3){
+
+        suit="spades";
+    }
     if (Pname==0){
         name="ace";
+        value=11;
 
     }
     if (Pname == 0) {
