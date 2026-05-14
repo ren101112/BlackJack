@@ -16,6 +16,15 @@ public class player {
 
         hit();
         stand();
+        printInfo();
+    }
+
+
+    public void printInfo() {
+        System.out.println("my name is "+ name+"it is "+ isBust+" that I have busted and I have "+cardTotal+ " cards");
+
+
+
     }
 
     public void hit (){

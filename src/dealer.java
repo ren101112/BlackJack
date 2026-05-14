@@ -7,12 +7,23 @@ public class dealer {
 
 
     public dealer(){
+        cardTotal=0;
+        isOver15=false;
+        isBust=false;
+
 
 
         Hit();
         stand();
+        printInfo();
     }
 
+
+    public void printInfo(){
+        System.out.println("the dealer has "+ " cards, and it is "+ " that the dealer has busted, and it is "+ "that the dealer has over 15 cards");
+
+
+    }
     public void Hit(){
 
 
