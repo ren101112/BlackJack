@@ -3,6 +3,7 @@ public class dealer {
     public int cardTotal;
     public boolean isOver15;
     public boolean isBust;
+    public card[] hand;
 
 
 
@@ -10,6 +11,8 @@ public class dealer {
         cardTotal=0;
         isOver15=false;
         isBust=false;
+        hand=new card[2];
+
 
 
 

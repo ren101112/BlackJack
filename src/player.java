@@ -12,16 +12,37 @@ public class player {
         cardTotal=0;
         isBust=false;
         isHit=false;
-        name="ren";
+        name="null";
+        hand = new card[2];
 
         hit();
         stand();
-        printInfo();
+
+    }
+
+    public void calcTotal(){
+        cardTotal=0;
+
+        for(int x=0; x<hand.length; x++){
+
+          cardTotal += hand[x].value;;
+
+        }
+
+
+
     }
 
 
     public void printInfo() {
-        System.out.println("my name is "+ name+"it is "+ isBust+" that I have busted and I have "+cardTotal+ " cards");
+        System.out.println("my name is "+ name+" and it is "+ isBust+" that I have busted and I have "+cardTotal+ " points in total");
+        System.out.println("my cards are: ");
+
+        for(int x=0;x<hand.length;x++){
+
+            hand[x].printInfo();
+
+        }
 
 
 

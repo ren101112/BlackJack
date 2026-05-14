@@ -1,6 +1,7 @@
 import com.sun.jdi.Value;
 
 import javax.xml.namespace.QName;
+import java.util.Scanner;
 
 public class basicGameApp {
 //todo: SOMEWHAT STRAIGHTFORWARD: MAKE A CONSTRUCTOR THAT HAS 3 parameters
@@ -21,8 +22,8 @@ basicGameApp game =new basicGameApp();
 
         int counter=0;
         System.out.println("welcome to blackjack");
-        player me = new player();
-        dealer d = new dealer();
+         me = new player();
+         d = new dealer();
         deck =new card[52];
 
         for(int y=0; y<4; y++) {
@@ -39,7 +40,17 @@ basicGameApp game =new basicGameApp();
         }
 
        shuffle();
+        me.hand[0]=deck[0];
+        me.hand[1]=deck[1];
+        me.calcTotal();
         printDeck();
+        //todo give the dealer cards
+        Scanner s =new Scanner(System.in);
+        System.out.println("what is your name?");
+        me.name= s.nextLine();
+        me.printInfo();
+
+
     }
     public void compare() {
 
