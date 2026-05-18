@@ -1,13 +1,13 @@
 public class card {
 
-public String suit;
+public String suit;//suit name and value variables
 public String name;
 public int value;
 
-public card(int Psuit, int Pname, int Pvalue){
-    value=Pvalue;
+public card(int Psuit, int Pname, int Pvalue){//constructor that has suit name and value parameters
+    value=Pvalue;//the pvalue is the only thing equal to the value
 
-    if (Psuit==0){
+    if (Psuit==0){//basically in the main class if we set the parameter suit number to 0-4, it will correspond to a suit that is actually a string
         suit="hearts";
 
 
@@ -26,7 +26,7 @@ public card(int Psuit, int Pname, int Pvalue){
         value=11;
 
     }
-    if (Pname == 0) {
+    if (Pname == 0) {//sets based on parameter name in main class to correspond to an actual card
         name = "ace";
         value = 11;
     } else if (Pname == 1) {
@@ -72,7 +72,7 @@ public card(int Psuit, int Pname, int Pvalue){
 
 
 public void printInfo(){
-    System.out.println("this card is the "+name+" of "+suit+" worth "+value+" points");
+    System.out.println(name+" of "+suit+" worth "+value+" points");//prints info
 
 }
 
